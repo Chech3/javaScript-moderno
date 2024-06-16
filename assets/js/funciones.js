@@ -14,11 +14,20 @@ const saludarFlecha = (nombre) => {
 function saludar3(nombre) {
     console.log("hola mundo " + nombre);
     console.log(arguments);
+    return "Algo para imprimir"
 }
 
+const suma = (a,b) => a + b; //Recortada mas clean
 
+const getAleatorio = () => Math.random();
+
+console.log(getAleatorio());
+
+console.log(suma(10,10));
 
 saludar();
 saludar2();
-saludar3("cheche", 43, true, "Mi casita");
-saludarFlecha("nsonadoansd");
+//Una funcion siempre debe retornar algo, sino retorna undefined
+const retornoDefuncion = saludar3("cheche", 43, true, "Mi casita");
+console.log(retornoDefuncion);
+// saludarFlecha("nsonadoansd");
