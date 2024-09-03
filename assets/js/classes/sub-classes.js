@@ -33,20 +33,20 @@ class Persona {
     }
 }
 
+class Heroe extends Persona {
+    clan = "Sin clan";
 
-const SpiderMan = new Persona("Peter", "Parker", 19);
-const IronMan = new Persona("Peter", "Parker", 19);
+    constructor (nombre,apellido,edad) {
+        super(nombre,apellido,edad);
+        this.clan = "Los avengers";
+    }
 
+    quienSoy() {
+        console.log(`Soy ${this.nombre} ${this.apellido} y soy de ${this.clan}`);
+        super.quienSoy();
+    }
+}
 
-SpiderMan.setComidaFavorita = "Pizza";
-SpiderMan.setComidaFavorita = "Duende verde"
-console.log(SpiderMan.getComidaFavorita)
-console.log(SpiderMan)
+const batman = new Heroe("Bruce", "Wayne", 30);
 
-console.log(Persona.getConteo)
-Persona.saludo();
-
-Persona.propiedadExterna = "Hola mundo";
-
-console.log(Persona)
-console.log(Persona.propiedadExterna)
+batman.quienSoy();
